@@ -6,7 +6,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 ### Local HTML preview
 
-<img src="preview/local_html_preview.png" width="1100">
+<img src="preview/local_html_preview.jpg" width="1100">
 
 - [Reviewer mki2](#reviewer-mki2)
 - [Reviewer mVvh](#reviewer-mvvh)
