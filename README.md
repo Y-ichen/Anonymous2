@@ -42,7 +42,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 ### Compositional examples
 
 <details>
-<summary><strong>Case 1</strong></summary>
+<summary><strong>Case 1</strong> — Replace all fruits with a vegetable and add black polka dots to the cup design, and make the water surface more reflective</summary>
 
 **Prompt.** Replace all fruits with a vegetable and add black polka dots to the cup design, and make the water surface more reflective
 
@@ -66,7 +66,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 2</strong></summary>
+<summary><strong>Case 2</strong> — Change the green field and trees in the background to a snowy landscape., and also change the background to a sunset sky</summary>
 
 **Prompt.** Change the green field and trees in the background to a snowy landscape., and also change the background to a sunset sky
 
@@ -90,7 +90,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 3</strong></summary>
+<summary><strong>Case 3</strong> — Remove the two cabins (architecture) from the image, leaving only the surrounding snow-covered trees and the snowy landscape., and add rain drops on the surface</summary>
 
 **Prompt.** Remove the two cabins (architecture) from the image, leaving only the surrounding snow-covered trees and the snowy landscape., and add rain drops on the surface
 
@@ -114,7 +114,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 4</strong></summary>
+<summary><strong>Case 4</strong> — Raise the person's right arm., while also removing all shadows</summary>
 
 **Prompt.** Raise the person's right arm., while also removing all shadows
 
@@ -138,7 +138,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 5</strong></summary>
+<summary><strong>Case 5</strong> — Transfer the image into a vibrant graffiti street-mural style., and make the water surface more reflective</summary>
 
 **Prompt.** Transfer the image into a vibrant graffiti street-mural style., and make the water surface more reflective
 
@@ -162,7 +162,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 6</strong></summary>
+<summary><strong>Case 6</strong> — Remove the red trolley (marked "77" and labeled "WEST CHESTER") from the railway track in the foreground., and darken the edges for a moody atmosphere</summary>
 
 **Prompt.** Remove the red trolley (marked "77" and labeled "WEST CHESTER") from the railway track in the foreground., and darken the edges for a moody atmosphere
 
@@ -186,7 +186,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 7</strong></summary>
+<summary><strong>Case 7</strong> — Make the person lift his head slightly., and add a lens flare from the sun</summary>
 
 **Prompt.** Make the person lift his head slightly., and add a lens flare from the sun
 
@@ -210,7 +210,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 8</strong></summary>
+<summary><strong>Case 8</strong> — Make the person lift his head slightly., and add rain drops on the surface</summary>
 
 **Prompt.** Make the person lift his head slightly., and add rain drops on the surface
 
@@ -234,7 +234,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 9</strong></summary>
+<summary><strong>Case 9</strong> — Change the color of the suit to a deep blue., and make it look like a nighttime scene</summary>
 
 **Prompt.** Change the color of the suit to a deep blue., and make it look like a nighttime scene
 
@@ -258,7 +258,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 10</strong></summary>
+<summary><strong>Case 10</strong> — Change the background from the forest to a desert landscape., and make the water surface more reflective</summary>
 
 **Prompt.** Change the background from the forest to a desert landscape., and make the water surface more reflective
 
@@ -294,7 +294,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 ### Qualitative examples
 
 <details>
-<summary><strong>Case 1</strong></summary>
+<summary><strong>Case 1</strong> — Make the man look significantly older by adding subtle wrinkles around the eyes and forehead, and turn his hair gray while preserving his happy expression and gentle demeanor.</summary>
 
 **Prompt.** Make the man look significantly older by adding subtle wrinkles around the eyes and forehead, and turn his hair gray while preserving his happy expression and gentle demeanor.
 
@@ -318,7 +318,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 2</strong></summary>
+<summary><strong>Case 2</strong> — Add a swimming reddish-brown octopus below the diver in the deep blue water, with its tentacles naturally extended.</summary>
 
 **Prompt.** Add a swimming reddish-brown octopus below the diver in the deep blue water, with its tentacles naturally extended.
 
@@ -342,7 +342,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 3</strong></summary>
+<summary><strong>Case 3</strong> — Extend the canvas to show more of the girl's upper body and beach background. Dress the girl as a pirate, replace the camera with an antique bronze telescope, and make her pose with it.</summary>
 
 **Prompt.** Extend the canvas to show more of the girl's upper body and beach background. Dress the girl as a pirate, replace the camera with an antique bronze telescope, and make her pose with it.
 
@@ -366,7 +366,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 4</strong></summary>
+<summary><strong>Case 4</strong> — Transform the image into a high-saturation Korean-drama scene with soft lighting, and turn the close-up horse into a unicorn with a spiral horn.</summary>
 
 **Prompt.** Transform the image into a high-saturation Korean-drama scene with soft lighting, and turn the close-up horse into a unicorn with a spiral horn.
 
@@ -390,7 +390,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 5</strong></summary>
+<summary><strong>Case 5</strong> — Replace the old sedan behind the man with a sleek black sports car, remove all signs of damage, and change the man's expression to a natural smile while keeping his other facial features unchanged.</summary>
 
 **Prompt.** Replace the old sedan behind the man with a sleek black sports car, remove all signs of damage, and change the man's expression to a natural smile while keeping his other facial features unchanged.
 
@@ -414,7 +414,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 6</strong></summary>
+<summary><strong>Case 6</strong> — Reduce the visual distortion caused by water ripples covering the swimmer's face and upper body to improve clarity.</summary>
 
 **Prompt.** Reduce the visual distortion caused by water ripples covering the swimmer's face and upper body to improve clarity.
 
@@ -438,7 +438,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 7</strong></summary>
+<summary><strong>Case 7</strong> — Extract the navy blue Adidas bodysuit with short sleeves and light blue shoulder stripes worn by the person in the image, and add cherry blossom petals floating in the air</summary>
 
 **Prompt.** Extract the navy blue Adidas bodysuit with short sleeves and light blue shoulder stripes worn by the person in the image, and add cherry blossom petals floating in the air
 
@@ -462,7 +462,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 8</strong></summary>
+<summary><strong>Case 8</strong> — Change the color of footprint in the sand to red., and add autumn leaves falling in the air</summary>
 
 **Prompt.** Change the color of footprint in the sand to red., and add autumn leaves falling in the air
 
@@ -486,7 +486,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 9</strong></summary>
+<summary><strong>Case 9</strong> — Raise the person's left arm., and change the lighting to golden hour</summary>
 
 **Prompt.** Raise the person's left arm., and change the lighting to golden hour
 
@@ -512,7 +512,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 ### Shared compositional examples
 
 <details>
-<summary><strong>Case 1</strong></summary>
+<summary><strong>Case 1</strong> — Replace all fruits with a vegetable and add black polka dots to the cup design, and make the water surface more reflective</summary>
 
 **Prompt.** Replace all fruits with a vegetable and add black polka dots to the cup design, and make the water surface more reflective
 
@@ -536,7 +536,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 2</strong></summary>
+<summary><strong>Case 2</strong> — Change the green field and trees in the background to a snowy landscape., and also change the background to a sunset sky</summary>
 
 **Prompt.** Change the green field and trees in the background to a snowy landscape., and also change the background to a sunset sky
 
@@ -560,7 +560,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 3</strong></summary>
+<summary><strong>Case 3</strong> — Remove the two cabins (architecture) from the image, leaving only the surrounding snow-covered trees and the snowy landscape., and add rain drops on the surface</summary>
 
 **Prompt.** Remove the two cabins (architecture) from the image, leaving only the surrounding snow-covered trees and the snowy landscape., and add rain drops on the surface
 
@@ -584,7 +584,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 4</strong></summary>
+<summary><strong>Case 4</strong> — Raise the person's right arm., while also removing all shadows</summary>
 
 **Prompt.** Raise the person's right arm., while also removing all shadows
 
@@ -608,7 +608,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 5</strong></summary>
+<summary><strong>Case 5</strong> — Transfer the image into a vibrant graffiti street-mural style., and make the water surface more reflective</summary>
 
 **Prompt.** Transfer the image into a vibrant graffiti street-mural style., and make the water surface more reflective
 
@@ -632,7 +632,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 6</strong></summary>
+<summary><strong>Case 6</strong> — Remove the red trolley (marked "77" and labeled "WEST CHESTER") from the railway track in the foreground., and darken the edges for a moody atmosphere</summary>
 
 **Prompt.** Remove the red trolley (marked "77" and labeled "WEST CHESTER") from the railway track in the foreground., and darken the edges for a moody atmosphere
 
@@ -656,7 +656,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 7</strong></summary>
+<summary><strong>Case 7</strong> — Make the person lift his head slightly., and add a lens flare from the sun</summary>
 
 **Prompt.** Make the person lift his head slightly., and add a lens flare from the sun
 
@@ -680,7 +680,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 8</strong></summary>
+<summary><strong>Case 8</strong> — Make the person lift his head slightly., and add rain drops on the surface</summary>
 
 **Prompt.** Make the person lift his head slightly., and add rain drops on the surface
 
@@ -704,7 +704,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 9</strong></summary>
+<summary><strong>Case 9</strong> — Change the color of the suit to a deep blue., and make it look like a nighttime scene</summary>
 
 **Prompt.** Change the color of the suit to a deep blue., and make it look like a nighttime scene
 
@@ -728,7 +728,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 10</strong></summary>
+<summary><strong>Case 10</strong> — Change the background from the forest to a desert landscape., and make the water surface more reflective</summary>
 
 **Prompt.** Change the background from the forest to a desert landscape., and make the water surface more reflective
 
@@ -754,7 +754,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 ### Shared failure cases
 
 <details>
-<summary><strong>Case 1</strong></summary>
+<summary><strong>Case 1</strong> — Convert this square image into a 3:2 landscape composition.</summary>
 
 **Prompt.** Convert this square image into a 3:2 landscape composition.
 
@@ -778,7 +778,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 2</strong></summary>
+<summary><strong>Case 2</strong> — Convert this portrait image into a landscape one.</summary>
 
 **Prompt.** Convert this portrait image into a landscape one.
 
@@ -802,7 +802,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 3</strong></summary>
+<summary><strong>Case 3</strong> — Convert this into a Ghibli-style watercolor animation</summary>
 
 **Prompt.** Convert this into a Ghibli-style watercolor animation
 
@@ -826,7 +826,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 4</strong></summary>
+<summary><strong>Case 4</strong> — Convert the image into a Miyazaki-style hand-drawn animation.</summary>
 
 **Prompt.** Convert the image into a Miyazaki-style hand-drawn animation.
 
@@ -862,7 +862,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 ### Closed-source comparisons
 
 <details>
-<summary><strong>Case 1</strong></summary>
+<summary><strong>Case 1</strong> — Remove all people from the background, and change the purple ribbon on the subject's graduation gown to orange.</summary>
 
 **Prompt.** Remove all people from the background, and change the purple ribbon on the subject's graduation gown to orange.
 
@@ -886,7 +886,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 2</strong></summary>
+<summary><strong>Case 2</strong> — Replace the child's hair with black long curly hair, then change it to a chef's hat and white chef outfit while keeping the facial expression unchanged.</summary>
 
 **Prompt.** Replace the child's hair with black long curly hair, then change it to a chef's hat and white chef outfit while keeping the facial expression unchanged.
 
@@ -910,7 +910,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 3</strong></summary>
+<summary><strong>Case 3</strong> — Add a light-gray modern sofa set and coffee table near the blank wall opposite the kitchen island, place a medium-sized plant beside it, add a large light-toned abstract painting on the opposite wall, place a small plant beside the TV cabinet, and add a light-gray mat near the apartment entrance.</summary>
 
 **Prompt.** Add a light-gray modern sofa set and coffee table near the blank wall opposite the kitchen island, place a medium-sized plant beside it, add a large light-toned abstract painting on the opposite wall, place a small plant beside the TV cabinet, and add a light-gray mat near the apartment entrance.
 
@@ -934,7 +934,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 4</strong></summary>
+<summary><strong>Case 4</strong> — Add black hanging dreadlocks to the man.</summary>
 
 **Prompt.** Add black hanging dreadlocks to the man.
 
@@ -958,7 +958,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 5</strong></summary>
+<summary><strong>Case 5</strong> — Change the black mug in the original image to green while preserving the 'NVIDIA' logo, add an Asian male holding the green mug, and replace the background with a modern office.</summary>
 
 **Prompt.** Change the black mug in the original image to green while preserving the 'NVIDIA' logo, add an Asian male holding the green mug, and replace the background with a modern office.
 
@@ -982,7 +982,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 6</strong></summary>
+<summary><strong>Case 6</strong> — Convert the two men into women. Give the woman on the left a light floral-patterned shirt and the woman on the right a light floral-patterned top, while preserving their poses and interactive expressions and keeping the result natural in a professional office setting.</summary>
 
 **Prompt.** Convert the two men into women. Give the woman on the left a light floral-patterned shirt and the woman on the right a light floral-patterned top, while preserving their poses and interactive expressions and keeping the result natural in a professional office setting.
 
@@ -1006,7 +1006,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 7</strong></summary>
+<summary><strong>Case 7</strong> — Replace the wooden cabinets in the background with white marble.</summary>
 
 **Prompt.** Replace the wooden cabinets in the background with white marble.
 
@@ -1030,7 +1030,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 8</strong></summary>
+<summary><strong>Case 8</strong> — Do the following three steps: 1) zoom out to show a seated person facing a laptop; 2) remove all text from the cardboard box; 3) keep the box, laptop, and background unchanged.</summary>
 
 **Prompt.** Do the following three steps: 1) zoom out to show a seated person facing a laptop; 2) remove all text from the cardboard box; 3) keep the box, laptop, and background unchanged.
 
@@ -1065,7 +1065,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 ### Failure cases
 
 <details>
-<summary><strong>Case 1</strong></summary>
+<summary><strong>Case 1</strong> — Convert this square image into a 3:2 landscape composition.</summary>
 
 **Prompt.** Convert this square image into a 3:2 landscape composition.
 
@@ -1089,7 +1089,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 2</strong></summary>
+<summary><strong>Case 2</strong> — Convert this portrait image into a landscape one.</summary>
 
 **Prompt.** Convert this portrait image into a landscape one.
 
@@ -1113,7 +1113,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 3</strong></summary>
+<summary><strong>Case 3</strong> — Convert this into a Ghibli-style watercolor animation</summary>
 
 **Prompt.** Convert this into a Ghibli-style watercolor animation
 
@@ -1137,7 +1137,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 </details>
 
 <details>
-<summary><strong>Case 4</strong></summary>
+<summary><strong>Case 4</strong> — Convert the image into a Miyazaki-style hand-drawn animation.</summary>
 
 **Prompt.** Convert the image into a Miyazaki-style hand-drawn animation.
 
