@@ -17,9 +17,11 @@ This page provides the qualitative and quantitative evidence referenced in the a
 - `TC-FM+` at `10` steps (`2.88` non-edited-region `L1`) already beats `SFT` at `40` steps (`3.28`).
 - On the compositional subset, both `TC-FM` and `TC-FM+` remain stronger than `SFT`, and the current sample does not show a clearly worse regime for overlap cases than for disjoint cases.
 
-### Step-sensitivity curves
+### Background-only L1 vs. sampling steps
 
 <img src="charts/nonedit_l1.svg" width="860">
+
+### Background-only LPIPS vs. sampling steps
 
 <img src="charts/nonedit_lpips.svg" width="860">
 
