@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anonymous Rebuttal Visual Evidence</title>
+  <style>
+    :root {
+      --bg: #f5efe6;
+      --panel: rgba(255, 252, 247, 0.96);
+      --panel-strong: #fffaf2;
+      --ink: #1f1b18;
+      --ink-strong: #171310;
+      --ink-soft: #3e342d;
+      --ink-muted: #6f6257;
+      --ink-faint: #9a8c81;
+      --muted: #64594f;
+      --line: rgba(74, 57, 45, 0.16);
+      --accent: #b45a3c;
+      --accent-2: #246a73;
+      --accent-3: #c18b2c;
+      --shadow: 0 18px 40px rgba(58, 39, 23, 0.08);
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --maxw: 1480px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink-soft);
+      background: #f6f1ea;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    h1, h2, h3, h4 {
+      margin: 0;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink-strong);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 24px;
+      width: min(calc(100vw - 40px), var(--maxw));
+      margin: 24px auto 64px;
+      align-items: start;
+    }
+
+    .rail {
+      position: sticky;
+      top: 20px;
+      padding: 12px 0 12px 18px;
+      border: 0;
+      border-left: 1px solid rgba(74, 57, 45, 0.10);
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+
+    .rail h2 {
+      font-size: 1.28rem;
+      margin-bottom: 6px;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+      letter-spacing: -0.02em;
+    }
+
+    .rail .subtle {
+      color: var(--ink-muted);
+      font-size: 0.80rem;
+      margin-bottom: 18px;
+      line-height: 1.35;
+      max-width: 18ch;
+    }
+
+    .jump-list {
+      display: grid;
+      gap: 2px;
+      margin-bottom: 4px;
+    }
+
+    .jump-list button {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      padding: 12px 0 12px 14px;
+      border-radius: 0;
+      border: 0;
+      background: transparent;
+      transition: transform 140ms ease, color 140ms ease, opacity 140ms ease;
+      color: inherit;
+      cursor: pointer;
+      text-align: left;
+      position: relative;
+      opacity: 0.62;
+    }
+
+    .jump-list button:hover {
+      transform: translateX(2px);
+      opacity: 0.9;
+    }
+
+    .jump-list button.active {
+      opacity: 1;
+      color: var(--accent);
+    }
+
+    .jump-list button span:first-child {
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .jump-list button::before {
+      content: "";
+      position: absolute;
+      left: -18px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      border-radius: 999px;
+      background: transparent;
+      transition: background 140ms ease;
+    }
+
+    .jump-list button.active::before {
+      background: var(--accent);
+    }
+
+    .jump-badge {
+      font-size: 0.66rem;
+      color: var(--ink-faint);
+      background: transparent;
+      border-radius: 999px;
+      padding: 0;
+      white-space: nowrap;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border: 0;
+    }
+
+    .main {
+      display: grid;
+      gap: 0;
+    }
+
+    .panel {
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 26px 28px;
+      background: var(--panel-strong);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(180, 90, 60, 0.10);
+      color: var(--accent);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 3.7vw, 3.7rem);
+      line-height: 0.98;
+      max-width: 11ch;
+      margin-bottom: 16px;
+    }
+
+    .hero-copy {
+      color: var(--muted);
+      max-width: 72ch;
+      font-size: 1.03rem;
+    }
+
+    .section {
+      padding: 8px 0 28px;
+    }
+
+    .view-section {
+      display: none;
+    }
+
+    .view-section.active {
+      display: block;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 22px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(74, 57, 45, 0.12);
+    }
+
+    .subsection-head {
+      display: grid;
+      gap: 6px;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .subsection-head h3 {
+      font-size: 1.2rem;
+      line-height: 1.1;
+    }
+
+    .subsection-head p {
+      margin: 0;
+      color: var(--ink-muted);
+      max-width: 68ch;
+      font-size: 0.94rem;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+      line-height: 1.02;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--ink-muted);
+      max-width: 68ch;
+      font-size: 0.98rem;
+    }
+
+    .reviewer-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .reviewer-tag {
+      padding: 0;
+      border-radius: 0;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      background: transparent;
+      color: var(--accent-2);
+      border: 0;
+    }
+
+    .chart-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+      margin-bottom: 22px;
+    }
+
+    .chart-card {
+      padding: 0 0 14px;
+      border-radius: 0;
+      background: transparent;
+      border: 0;
+    }
+
+    .chart-card h3 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .chart-card p {
+      color: var(--ink-muted);
+      font-size: 0.92rem;
+      margin: 0 0 14px;
+    }
+
+    .chart {
+      width: 100%;
+      height: 250px;
+      display: block;
+    }
+
+    .metric-table-wrap {
+      overflow-x: auto;
+      margin-top: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(74, 57, 45, 0.10);
+    }
+
+    th {
+      color: var(--ink-muted);
+      font-weight: 600;
+    }
+
+    .gallery {
+      display: grid;
+      gap: 0;
+      margin-top: 18px;
+    }
+
+    .case-card {
+      border: 0;
+      border-radius: 0;
+      background: rgba(255, 251, 245, 0.72);
+      overflow: hidden;
+      padding: 18px 18px 22px;
+    }
+
+    .case-card + .case-card {
+      margin-top: 20px;
+    }
+
+    .case-head {
+      padding: 0 0 12px;
+      display: grid;
+      gap: 10px;
+      border-bottom: 0;
+    }
+
+    .case-head h3 {
+      font-size: 1.16rem;
+      line-height: 1.2;
+    }
+
+    .prompt {
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .prompt-block {
+      display: grid;
+      gap: 6px;
+      margin: 0;
+      padding: 12px 14px 11px;
+      background: transparent;
+      border: 1px solid rgba(74, 57, 45, 0.12);
+      border-radius: 0;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      font-weight: 700;
+    }
+
+    .meta-line {
+      margin: 0;
+      padding-top: 0;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+      border-top: 0;
+    }
+
+    .inline-label {
+      color: var(--ink-faint);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 0.76rem;
+      margin-right: 8px;
+    }
+
+    .note {
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+      margin: 0;
+    }
+
+    .addresses {
+      color: var(--ink-muted);
+      font-size: 0.86rem;
+      margin: 0;
+    }
+
+    .image-grid {
+      display: grid;
+      gap: 8px;
+      padding: 0;
+      grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr));
+    }
+
+    .image-cell {
+      display: grid;
+      gap: 8px;
+      position: relative;
+    }
+
+    .img-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.82rem;
+      color: var(--ink-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0 2px;
+    }
+
+    .image-cell img {
+      width: 100%;
+      display: block;
+      height: auto;
+      border-radius: 0;
+      border: 1px solid rgba(74, 57, 45, 0.12);
+      cursor: zoom-in;
+      background: #efe8dc;
+    }
+
+    .zoom-hint {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      transform: translateY(4px);
+      width: auto;
+      max-width: calc(100% - 20px);
+      padding: 8px 10px;
+      border-radius: 0;
+      background: rgba(246, 241, 234, 0.96);
+      color: var(--ink-soft);
+      font-size: 0.76rem;
+      line-height: 1.35;
+      border: 1px solid rgba(74, 57, 45, 0.14);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 140ms ease, transform 140ms ease;
+      z-index: 20;
+    }
+
+    .image-cell:hover .zoom-hint,
+    .image-cell:focus-within .zoom-hint {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .footer-note {
+      padding: 16px 18px;
+      font-size: 0.92rem;
+      color: var(--muted);
+      border-top: 1px solid rgba(74, 57, 45, 0.08);
+      background: rgba(255,255,255,0.5);
+    }
+
+    .findings-callout {
+      margin: 0 0 18px;
+      padding: 16px 18px;
+      background: rgba(255, 248, 238, 0.9);
+      border-left: 3px solid var(--accent);
+    }
+
+    .findings-callout h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .findings-callout p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+      max-width: 78ch;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(16, 13, 11, 0.86);
+      z-index: 1000;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-inner {
+      position: relative;
+      max-width: min(94vw, 1600px);
+      max-height: 90vh;
+      display: grid;
+      gap: 12px;
+      justify-items: center;
+    }
+
+    .lightbox-topline {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.88);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .lightbox img {
+      max-width: 100%;
+      max-height: 82vh;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .lightbox-caption {
+      color: rgba(255,255,255,0.84);
+      text-align: center;
+      max-width: 80ch;
+      font-size: 0.95rem;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 0;
+      width: 42px;
+      height: 42px;
+      font-size: 1.2rem;
+      background: rgba(246, 241, 234, 0.08);
+      color: #fff;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 0;
+      width: 52px;
+      height: 42px;
+      font-size: 1.1rem;
+      background: rgba(246, 241, 234, 0.08);
+      color: #fff;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+    }
+
+    .lightbox-prev {
+      left: 8px;
+    }
+
+    .lightbox-next {
+      right: 8px;
+    }
+
+    @media (max-width: 1180px) {
+      .shell {
+        grid-template-columns: 1fr;
+      }
+
+      .rail {
+        position: static;
+      }
+
+      .chart-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 820px) {
+      .shell {
+        width: min(calc(100vw - 18px), var(--maxw));
+        margin: 10px auto 40px;
+        gap: 14px;
+      }
+
+      .hero,
+      .section {
+        padding: 20px;
+      }
+
+      .chart-grid,
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .image-grid {
+        --cols: 1;
+      }
+
+      .zoom-hint {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail">
+      <h2>Quick Jump</h2>
+      <div class="subtle">Built for reviewer-first navigation. Each section groups the exact evidence relevant to a reviewer's questions.</div>
+      <nav class="jump-list" id="view-nav">
+        <button type="button" class="active" data-view="mki2"><span>mki2</span><span class="jump-badge">Steps + Compound</span></button>
+        <button type="button" data-view="mvvh"><span>mVvh</span><span class="jump-badge">Qualitative</span></button>
+        <button type="button" data-view="v9gq"><span>V9Gq</span><span class="jump-badge">Closed-source</span></button>
+        <button type="button" data-view="dx1h"><span>Dx1H</span><span class="jump-badge">Failures</span></button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <section class="panel section view-section active" id="mki2" data-view-section="mki2">
+        <div class="section-head">
+          <div class="reviewer-head">
+            <span class="reviewer-tag">Reviewer mki2</span>
+          </div>
+          <h2>Inference-time robustness and compositional behavior</h2>
+          <p>
+            This section directly addresses two questions: how preservation changes with sampling steps, and whether compositional instructions remain tractable when multiple edits coexist.
+          </p>
+        </div>
+
+        <div class="subsection-head" style="margin-top: 0;">
+          <h3>Step-sensitivity summary</h3>
+        </div>
+        <div class="findings-callout">
+          <h3>Key findings</h3>
+          <p>
+            <span id="mki2-summary-1"></span>
+            <span id="mki2-summary-2"></span>
+          </p>
+        </div>
+
+        <div class="chart-grid">
+          <div class="chart-card">
+            <h3>Background-only L1 vs. sampling steps</h3>
+            <p>Directly matches the reviewer’s “background L1 error” request. Lower is better.</p>
+            <svg class="chart" id="chart-nonedit-l1" viewBox="0 0 560 250" preserveAspectRatio="none"></svg>
+          </div>
+          <div class="chart-card">
+            <h3>Background-only LPIPS vs. sampling steps</h3>
+            <p>Perceptual drift measured only on the non-edited region. Lower is better.</p>
+            <svg class="chart" id="chart-nonedit-lpips" viewBox="0 0 560 250" preserveAspectRatio="none"></svg>
+          </div>
+        </div>
+
+        <div class="metric-table-wrap" id="mki2-table-wrap"></div>
+
+        <div class="subsection-head">
+          <h3>Compositional examples</h3>
+        </div>
+        <div class="findings-callout">
+          <h3>Key findings</h3>
+          <p>
+            In the current compositional sample, both <code>TC-FM</code> and <code>TC-FM+</code> remain stronger than <code>SFT</code>, and overlap cases do not show a clearly worse regime than disjoint cases. These examples support the rebuttal claim that the correction signal remains concentrated on the final edited support rather than spilling into invariant regions.
+          </p>
+        </div>
+        <div class="gallery" id="mki2-compositional-gallery"></div>
+      </section>
+
+      <section class="panel section view-section" id="mvvh" data-view-section="mvvh">
+        <div class="section-head">
+          <div class="reviewer-head">
+            <span class="reviewer-tag">Reviewer mVvh</span>
+          </div>
+          <h2>Higher-coverage qualitative panel</h2>
+          <p>
+            These cases are curated to show the contribution of <code>TC-FM</code> itself, not just the final <code>TC-FM+</code> model. The recurring pattern is better non-edited-region preservation together with more realistic local texture, stronger face consistency, and better physical plausibility.
+          </p>
+        </div>
+        <div class="findings-callout">
+          <h3>Key findings</h3>
+          <p>
+            Across these additional qualitative examples, <code>TC-FM</code> already improves over <code>SFT</code> in non-edited-region preservation and facial consistency, while <code>TC-FM+</code> further strengthens local realism, material texture, and physical plausibility. These cases are included to make the intermediate contribution of regular <code>TC-FM</code> directly visible.
+          </p>
+        </div>
+        <div class="gallery" id="mvvh-gallery"></div>
+        <div class="section-head" style="margin-top: 28px;">
+          <h2 style="font-size: 1.55rem;">Shared compositional examples</h2>
+          <p>
+            These compositional cases are also shown here because they provide additional qualitative evidence for multi-constraint editing, which strengthens this reviewer's concern about qualitative coverage.
+          </p>
+        </div>
+        <div class="gallery" id="mvvh-compositional-gallery"></div>
+        <div class="section-head" style="margin-top: 28px;">
+          <h2 style="font-size: 1.55rem;">Shared failure cases</h2>
+          <p>
+            These same failure cases are also shown here because they directly support this reviewer's request for explicit limitations and failure scenarios, not only Dx1H's similar concern.
+          </p>
+        </div>
+        <div class="gallery" id="mvvh-failure-gallery"></div>
+      </section>
+
+      <section class="panel section view-section" id="v9gq" data-view-section="v9gq">
+        <div class="section-head">
+          <div class="reviewer-head">
+            <span class="reviewer-tag">Reviewer V9Gq</span>
+          </div>
+          <h2>Closed-source visual comparisons</h2>
+          <p>
+            These cases focus on the pattern emphasized in the written rebuttal: more precise localized editing, stronger instruction satisfaction under compound requests, and fewer collateral changes to non-edited regions such as pose, layout, walls, furniture, or background structure.
+          </p>
+        </div>
+        <div class="findings-callout">
+          <h3>Key findings</h3>
+          <p>
+            Relative to strong closed-source editors, <code>TC-FM+</code> is consistently more precise in the targeted edit region and causes fewer unintended changes to pose, layout, wall structure, or background context. The advantage is most visible on compound instructions, where competing models more often satisfy the edit by globally repainting the scene.
+          </p>
+        </div>
+        <div class="gallery" id="v9gq-gallery"></div>
+      </section>
+
+      <section class="panel section view-section" id="dx1h" data-view-section="dx1h">
+        <div class="section-head">
+          <div class="reviewer-head">
+            <span class="reviewer-tag">Reviewer Dx1H</span>
+          </div>
+          <h2>Explicit failure cases and limitation boundaries</h2>
+          <p>
+            These cases support the response that the method is strongest when the edit can be expressed as a localized correction on top of a largely preserved scene structure, and weaker on franchise-specific stylization and large proportion-changing geometric edits.
+          </p>
+        </div>
+        <div class="findings-callout">
+          <h3>Key findings</h3>
+          <p>
+            The clearest failure modes cluster in two regimes: franchise-specific stylization and large geometric edits such as resizing or aspect-ratio transformation. These cases are included to make the limitation boundary explicit rather than leaving it implicit in the rebuttal text.
+          </p>
+        </div>
+        <div class="gallery" id="dx1h-gallery"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+    <div class="lightbox-inner">
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous">‹</button>
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next">›</button>
+      <div class="lightbox-topline" id="lightbox-model"></div>
+      <img id="lightbox-image" alt="" />
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <script src="./showcase-data.js"></script>
+  <script>
+    const manifest = window.REBUTTAL_MANIFEST || [];
+    const metrics = window.REBUTTAL_METRICS || {};
+    const metricsNonedit = window.REBUTTAL_METRICS_NONEDIT || {};
+
+    const steps = [10, 20, 40, 60];
+    const methodDisplay = {
+      source: "Source",
+      sft: "SFT",
+      tcfm: "TC-FM",
+      tcfmplus: "TC-FM+",
+      nano: "Nano-Banana",
+      seedream4: "Seedream4"
+    };
+
+    const notes = {
+      A1: "Resize failure: the model does not successfully perform the requested proportion change from square to 3:2 landscape.",
+      A2: "Resize failure: converting a portrait-oriented composition into a landscape layout remains unreliable.",
+      A3: "Stylization failure: the result does not convincingly reach the requested Ghibli-style watercolor animation target.",
+      A4: "Stylization failure: the output misses the intended Miyazaki-like hand-drawn aesthetic.",
+      B1: "Age transformation looks materially more realistic, especially in facial texture and the interaction between gray hair and skin aging cues.",
+      B2: "The inserted octopus is more coherent, while head pose and facial expression remain more believable.",
+      B3: "The pirate transformation preserves person-specific detail more convincingly while making the new object interaction look more natural.",
+      B4: "The horse-to-unicorn transformation is more semantically convincing and visually realistic.",
+      B5: "Face consistency is stronger and the beard is not accidentally lost during the edit.",
+      B6: "The ripple reduction is more natural and does not over-flatten the water texture.",
+      B7: "Body scale, skin tone, and garment texture stay closer to the original while the requested apparel extraction/edit remains plausible.",
+      B8: "The sand texture remains much more realistic after the footprint color edit, rather than becoming over-smoothed or synthetic.",
+      B9: "Human texture, clothing realism, and shadow structure remain more physically plausible after the edit.",
+      C1: "Only the targeted ribbon region is edited, while other irrelevant areas remain intact.",
+      C2: "The compound request is satisfied more completely, especially the replacement of black long curly hair, while facial expression remains faithful.",
+      C3: "The compound request is satisfied without globally repainting the non-edited wall and room structure.",
+      C4: "The person remains in the same position and pose; competing models introduce unintended pose changes.",
+      C5: "Product appearance and text consistency are preserved more accurately.",
+      C6: "Gender transformation is successful while pose and interaction remain stable; competing outputs either miss the gender conversion or alter pose.",
+      C7: "Only the specified background region is replaced; unrelated background regions remain unchanged.",
+      C8: "The relative position of the box and laptop, as well as the surrounding background, stays fixed as requested.",
+      D1: "Overlap compositional case: both models remain stronger than SFT without a distinct collapse relative to disjoint cases.",
+      D2: "Disjoint compositional case with multiple background constraints.",
+      D3: "Disjoint compositional case combining object removal with surface/weather modification.",
+      D4: "Disjoint compositional case combining pose and lighting/shadow requirement.",
+      D5: "Disjoint compositional case combining stylization and surface realism.",
+      D6: "Disjoint compositional case combining object removal and global atmosphere change.",
+      D7: "Overlap compositional case where pose and optical effect co-occupy related image regions.",
+      D8: "Overlap compositional case combining pose change and rain-drop effect near the subject.",
+      D9: "Overlap compositional case combining suit-color change and global nighttime conversion.",
+      D10: "Overlap compositional case combining background replacement with water-surface editing."
+    };
+
+    const addresses = {
+      A1: "Dx1H R2; mVvh R4-R5. Failure cases and limitations for large geometric edits.",
+      A2: "Dx1H R2; mVvh R4-R5. Failure cases and limitations for aspect-ratio-changing edits.",
+      A3: "Dx1H R2; mVvh R4-R5. Failure cases and limitations for stylized editing.",
+      A4: "Dx1H R2; mVvh R4-R5. Failure cases and limitations for stylized editing.",
+      B1: "mVvh R1. Richer qualitative evidence and clearer visibility of regular TC-FM.",
+      B2: "mVvh R1. Richer qualitative evidence and clearer visibility of regular TC-FM.",
+      B3: "mVvh R1. Richer qualitative evidence and clearer visibility of regular TC-FM.",
+      B4: "mVvh R1. Richer qualitative evidence and clearer visibility of regular TC-FM.",
+      B5: "mVvh R1. Richer qualitative evidence and clearer visibility of regular TC-FM.",
+      B6: "mVvh R1. Richer qualitative evidence and clearer visibility of regular TC-FM.",
+      B7: "mVvh R1. Richer qualitative evidence and clearer visibility of regular TC-FM.",
+      B8: "mVvh R1. Richer qualitative evidence and clearer visibility of regular TC-FM.",
+      B9: "mVvh R1. Richer qualitative evidence and clearer visibility of regular TC-FM.",
+      C1: "V9Gq R4. Visual comparison with strong closed-source models, especially precise localized editing.",
+      C2: "V9Gq R4. Visual comparison with strong closed-source models on compound instructions.",
+      C3: "V9Gq R4. Visual comparison with strong closed-source models on compound instructions and non-edited-region preservation.",
+      C4: "V9Gq R4. Visual comparison with strong closed-source models on pose and layout preservation.",
+      C5: "V9Gq R4. Visual comparison with strong closed-source models on product fidelity and text consistency.",
+      C6: "V9Gq R4. Visual comparison with strong closed-source models on gender transformation with pose preservation.",
+      C7: "V9Gq R4. Visual comparison with strong closed-source models on precise background-region replacement.",
+      C8: "V9Gq R4. Visual comparison with strong closed-source models on preserving object-relative layout and background.",
+      D1: "mki2 R3. Compositional instructions and interference between overlapping edit regions.",
+      D2: "mki2 R3. Compositional instructions with disjoint edit regions.",
+      D3: "mki2 R3. Compositional instructions with disjoint edit regions.",
+      D4: "mki2 R3. Compositional instructions with disjoint edit regions.",
+      D5: "mki2 R3. Compositional instructions with disjoint edit regions.",
+      D6: "mki2 R3. Compositional instructions with disjoint edit regions.",
+      D7: "mki2 R3. Compositional instructions and interference between overlapping edit regions.",
+      D8: "mki2 R3. Compositional instructions and interference between overlapping edit regions.",
+      D9: "mki2 R3. Compositional instructions and interference between overlapping edit regions.",
+      D10: "mki2 R3. Compositional instructions and interference between overlapping edit regions."
+    };
+
+    const promptOverrides = {
+      A1: "Convert this square image into a 3:2 landscape composition.",
+      A2: "Convert this portrait image into a landscape one.",
+      A4: "Convert the image into a Miyazaki-style hand-drawn animation.",
+      B1: "Make the man look significantly older by adding subtle wrinkles around the eyes and forehead, and turn his hair gray while preserving his happy expression and gentle demeanor.",
+      B2: "Add a swimming reddish-brown octopus below the diver in the deep blue water, with its tentacles naturally extended.",
+      B3: "Extend the canvas to show more of the girl's upper body and beach background. Dress the girl as a pirate, replace the camera with an antique bronze telescope, and make her pose with it.",
+      B4: "Transform the image into a high-saturation Korean-drama scene with soft lighting, and turn the close-up horse into a unicorn with a spiral horn.",
+      B5: "Replace the old sedan behind the man with a sleek black sports car, remove all signs of damage, and change the man's expression to a natural smile while keeping his other facial features unchanged.",
+      B6: "Reduce the visual distortion caused by water ripples covering the swimmer's face and upper body to improve clarity.",
+      C1: "Remove all people from the background, and change the purple ribbon on the subject's graduation gown to orange.",
+      C2: "Replace the child's hair with black long curly hair, then change it to a chef's hat and white chef outfit while keeping the facial expression unchanged.",
+      C3: "Add a light-gray modern sofa set and coffee table near the blank wall opposite the kitchen island, place a medium-sized plant beside it, add a large light-toned abstract painting on the opposite wall, place a small plant beside the TV cabinet, and add a light-gray mat near the apartment entrance.",
+      C4: "Add black hanging dreadlocks to the man.",
+      C5: "Change the black mug in the original image to green while preserving the 'NVIDIA' logo, add an Asian male holding the green mug, and replace the background with a modern office.",
+      C6: "Convert the two men into women. Give the woman on the left a light floral-patterned shirt and the woman on the right a light floral-patterned top, while preserving their poses and interactive expressions and keeping the result natural in a professional office setting.",
+      C7: "Replace the wooden cabinets in the background with white marble.",
+      C8: "Do the following three steps: 1) zoom out to show a seated person facing a laptop; 2) remove all text from the cardboard box; 3) keep the box, laptop, and background unchanged."
+    };
+
+    const reviewerGroups = {
+      dx1h: ["A1", "A2", "A3", "A4"],
+      mki2Compositional: ["D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10"],
+      mvvh: ["B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9"],
+      v9gq: ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"]
+    };
+
+    function byId(id) {
+      return document.getElementById(id);
+    }
+
+    function getCase(caseId) {
+      return manifest.find((item) => item.case_id === caseId);
+    }
+
+    function formatNumber(n, digits = 2) {
+      return Number(n).toFixed(digits);
+    }
+
+    function pctReduction(base, improved) {
+      return ((base - improved) / base) * 100;
+    }
+
+    function buildSummaryText() {
+      const sft40 = metricsNonedit.sft["40"];
+      const tcfm40 = metricsNonedit.tcfm["40"];
+      const plus40 = metricsNonedit.tcfm_plus["40"];
+      const plus10 = metricsNonedit.tcfm_plus["10"];
+
+      byId("mki2-summary-1").textContent =
+        `At 40 steps, TC-FM+ reduces background-only L1 from ${formatNumber(sft40.l1_mean)} to ${formatNumber(plus40.l1_mean)} (${formatNumber(pctReduction(sft40.l1_mean, plus40.l1_mean), 1)}%), and background-only LPIPS from ${formatNumber(sft40.lpips_mean, 4)} to ${formatNumber(plus40.lpips_mean, 4)} (${formatNumber(pctReduction(sft40.lpips_mean, plus40.lpips_mean), 1)}%). `;
+
+      byId("mki2-summary-2").textContent =
+        `TC-FM stabilizes earlier than SFT, and TC-FM+ at 10 steps (${formatNumber(plus10.l1_mean)}) already beats SFT at 40 steps (${formatNumber(sft40.l1_mean)}) on non-edited-region L1. `;
+    }
+
+    function lineChart(svgId, metricKey, titleColor = "#b45a3c") {
+      const svg = byId(svgId);
+      const width = 560;
+      const height = 250;
+      const pad = { top: 18, right: 16, bottom: 36, left: 42 };
+      const innerW = width - pad.left - pad.right;
+      const innerH = height - pad.top - pad.bottom;
+
+      const series = [
+        { key: "sft", color: "#7b8793", label: "SFT" },
+        { key: "tcfm", color: "#246a73", label: "TC-FM" },
+        { key: "tcfm_plus", color: "#b45a3c", label: "TC-FM+" }
+      ];
+
+      const values = series.flatMap((s) => steps.map((step) => metricsNonedit[s.key][step][metricKey]));
+      const min = Math.min(...values);
+      const max = Math.max(...values);
+      const yMin = min * 0.92;
+      const yMax = max * 1.08;
+
+      const x = (step) => pad.left + (steps.indexOf(step) / (steps.length - 1)) * innerW;
+      const y = (value) => pad.top + innerH - ((value - yMin) / (yMax - yMin)) * innerH;
+
+      const gridLines = [0, 0.25, 0.5, 0.75, 1].map((t) => {
+        const val = yMin + (yMax - yMin) * t;
+        const yy = y(val);
+        return `
+          <line x1="${pad.left}" y1="${yy}" x2="${width - pad.right}" y2="${yy}" stroke="rgba(74,57,45,0.10)" />
+          <text x="${pad.left - 8}" y="${yy + 4}" text-anchor="end" fill="#64594f" font-size="11">${metricKey === "lpips_mean" ? val.toFixed(3) : val.toFixed(1)}</text>
+        `;
+      }).join("");
+
+      const stepLabels = steps.map((step) => `
+        <text x="${x(step)}" y="${height - 10}" text-anchor="middle" fill="#64594f" font-size="11">${step}</text>
+      `).join("");
+
+      const seriesPaths = series.map((s) => {
+        const points = steps.map((step) => `${x(step)},${y(metricsNonedit[s.key][step][metricKey])}`).join(" ");
+        const dots = steps.map((step) => {
+          const value = metricsNonedit[s.key][step][metricKey];
+          return `
+            <circle cx="${x(step)}" cy="${y(value)}" r="4.6" fill="${s.color}" />
+            <title>${s.label} · ${step} steps · ${metricKey === "lpips_mean" ? value.toFixed(4) : value.toFixed(2)}</title>
+          `;
+        }).join("");
+        return `
+          <polyline fill="none" stroke="${s.color}" stroke-width="3.2" points="${points}" />
+          ${dots}
+        `;
+      }).join("");
+
+      const legend = series.map((s, idx) => `
+        <g transform="translate(${pad.left + idx * 118}, ${pad.top - 2})">
+          <rect x="0" y="0" width="18" height="3.5" rx="2" fill="${s.color}" />
+          <text x="24" y="5" fill="#64594f" font-size="12">${s.label}</text>
+        </g>
+      `).join("");
+
+      svg.innerHTML = `
+        <rect x="0" y="0" width="${width}" height="${height}" fill="transparent"></rect>
+        ${gridLines}
+        <line x1="${pad.left}" y1="${pad.top + innerH}" x2="${width - pad.right}" y2="${pad.top + innerH}" stroke="rgba(74,57,45,0.20)" />
+        ${stepLabels}
+        ${seriesPaths}
+        ${legend}
+      `;
+    }
+
+    function buildMki2Table() {
+      const table = `
+        <table>
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>10-step non-edit L1</th>
+              <th>40-step non-edit L1</th>
+              <th>10-step non-edit LPIPS</th>
+              <th>40-step non-edit LPIPS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SFT</td>
+              <td>${formatNumber(metricsNonedit.sft["10"].l1_mean)}</td>
+              <td>${formatNumber(metricsNonedit.sft["40"].l1_mean)}</td>
+              <td>${formatNumber(metricsNonedit.sft["10"].lpips_mean, 4)}</td>
+              <td>${formatNumber(metricsNonedit.sft["40"].lpips_mean, 4)}</td>
+            </tr>
+            <tr>
+              <td>TC-FM</td>
+              <td>${formatNumber(metricsNonedit.tcfm["10"].l1_mean)}</td>
+              <td>${formatNumber(metricsNonedit.tcfm["40"].l1_mean)}</td>
+              <td>${formatNumber(metricsNonedit.tcfm["10"].lpips_mean, 4)}</td>
+              <td>${formatNumber(metricsNonedit.tcfm["40"].lpips_mean, 4)}</td>
+            </tr>
+            <tr>
+              <td>TC-FM+</td>
+              <td><strong>${formatNumber(metricsNonedit.tcfm_plus["10"].l1_mean)}</strong></td>
+              <td><strong>${formatNumber(metricsNonedit.tcfm_plus["40"].l1_mean)}</strong></td>
+              <td>${formatNumber(metricsNonedit.tcfm_plus["10"].lpips_mean, 4)}</td>
+              <td><strong>${formatNumber(metricsNonedit.tcfm_plus["40"].lpips_mean, 4)}</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      `;
+      byId("mki2-table-wrap").innerHTML = table;
+    }
+
+    function makeImageCell(src, label, caption) {
+      if (!src) return "";
+      return `
+        <div class="image-cell">
+          <div class="img-label"><span>${label}</span></div>
+          <img src="${src}" alt="${caption}" loading="lazy" data-caption="${escapeHtml(caption)}" data-model="${escapeHtml(label)}" />
+          <div class="zoom-hint">Click to open the enlarged view for finer texture and detail comparison.</div>
+        </div>
+      `;
+    }
+
+    function escapeHtml(text) {
+      return String(text || "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;");
+    }
+
+    function renderCaseCard(item, displayIndex = null) {
+      const order =
+        item.group === "closed_source"
+          ? ["source", "tcfmplus", "nano", "seedream4"]
+          : ["source", "sft", "tcfm", "tcfmplus"];
+
+      const available = order.filter((key) => item.images[key]);
+      const captionBase = `${item.case_id} · ${item.board} #${item.index}`;
+      const note = notes[item.case_id] || item.note || "";
+      const address = addresses[item.case_id] || "";
+      const prompt = promptOverrides[item.case_id] || item.prompt;
+      const shownIndex = displayIndex ?? item.index;
+      return `
+        <article class="case-card">
+          <div class="case-head">
+            <h3>Case ${shownIndex}</h3>
+            <div class="prompt-block">
+              <div class="meta-label">Prompt</div>
+              <p class="prompt">${escapeHtml(prompt)}</p>
+            </div>
+            ${address ? `<p class="meta-line addresses"><span class="inline-label">Reviewer concern:</span>${escapeHtml(address)}</p>` : ""}
+            ${note ? `<p class="meta-line note"><span class="inline-label">Visual takeaway:</span>${escapeHtml(note)}</p>` : ""}
+          </div>
+          <div class="image-grid" style="--cols:${available.length}">
+            ${available.map((key) => makeImageCell(item.images[key], methodDisplay[key], `${captionBase} · ${methodDisplay[key]}`)).join("")}
+          </div>
+        </article>
+      `;
+    }
+
+    function renderCaseList(targetId, caseIds) {
+      const items = caseIds.map(getCase).filter(Boolean);
+      byId(targetId).innerHTML = items.map((item, idx) => renderCaseCard(item, idx + 1)).join("");
+    }
+
+    function buildViewNav() {
+      const nav = byId("view-nav");
+      const buttons = [...nav.querySelectorAll("[data-view]")];
+      const sections = [...document.querySelectorAll("[data-view-section]")];
+
+      function activate(view) {
+        buttons.forEach((btn) => btn.classList.toggle("active", btn.dataset.view === view));
+        sections.forEach((section) => section.classList.toggle("active", section.dataset.viewSection === view));
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      nav.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-view]");
+        if (!button) return;
+        activate(button.dataset.view);
+      });
+    }
+
+    function buildLightbox() {
+      const box = byId("lightbox");
+      const image = byId("lightbox-image");
+      const caption = byId("lightbox-caption");
+      const model = byId("lightbox-model");
+      const prevBtn = byId("lightbox-prev");
+      const nextBtn = byId("lightbox-next");
+      let currentImages = [];
+      let currentIndex = 0;
+
+      function renderCurrent() {
+        const img = currentImages[currentIndex];
+        if (!img) return;
+        image.src = img.src;
+        image.alt = img.alt || "";
+        caption.textContent = img.dataset.caption || "";
+        model.textContent = img.dataset.model || "";
+        prevBtn.style.display = currentImages.length > 1 ? "block" : "none";
+        nextBtn.style.display = currentImages.length > 1 ? "block" : "none";
+      }
+
+      const close = () => box.classList.remove("open");
+
+      document.body.addEventListener("click", (event) => {
+        const img = event.target.closest("img[data-caption]");
+        if (!img) return;
+        const caseCard = img.closest(".case-card, .sample-card");
+        currentImages = caseCard ? [...caseCard.querySelectorAll("img[data-caption]")] : [img];
+        currentIndex = Math.max(0, currentImages.indexOf(img));
+        renderCurrent();
+        box.classList.add("open");
+      });
+
+      byId("lightbox-close").addEventListener("click", close);
+      prevBtn.addEventListener("click", (event) => {
+        event.stopPropagation();
+        if (!currentImages.length) return;
+        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+        renderCurrent();
+      });
+      nextBtn.addEventListener("click", (event) => {
+        event.stopPropagation();
+        if (!currentImages.length) return;
+        currentIndex = (currentIndex + 1) % currentImages.length;
+        renderCurrent();
+      });
+      box.addEventListener("click", (event) => {
+        if (event.target === box) close();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") close();
+        if (!box.classList.contains("open")) return;
+        if (event.key === "ArrowLeft" && currentImages.length > 1) {
+          currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+          renderCurrent();
+        }
+        if (event.key === "ArrowRight" && currentImages.length > 1) {
+          currentIndex = (currentIndex + 1) % currentImages.length;
+          renderCurrent();
+        }
+      });
+    }
+
+    buildSummaryText();
+    lineChart("chart-nonedit-l1", "l1_mean");
+    lineChart("chart-nonedit-lpips", "lpips_mean");
+    buildMki2Table();
+    renderCaseList("dx1h-gallery", reviewerGroups.dx1h);
+    renderCaseList("mki2-compositional-gallery", reviewerGroups.mki2Compositional);
+    renderCaseList("mvvh-gallery", reviewerGroups.mvvh);
+    renderCaseList("mvvh-compositional-gallery", reviewerGroups.mki2Compositional);
+    renderCaseList("mvvh-failure-gallery", reviewerGroups.dx1h);
+    renderCaseList("v9gq-gallery", reviewerGroups.v9gq);
+    buildViewNav();
+    buildLightbox();
+  </script>
+</body>
+</html>
