@@ -46,7 +46,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Replace all fruits with a vegetable and add black polka dots to the cup design, and make the water surface more reflective
 
-**Observation.** Overlap compositional case: both models remain stronger than SFT without a distinct collapse relative to disjoint cases.
+> **Observation.** Overlap compositional case: both models remain stronger than SFT without a distinct collapse relative to disjoint cases.
 
 <table>
   <tr>
@@ -70,7 +70,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Change the green field and trees in the background to a snowy landscape., and also change the background to a sunset sky
 
-**Observation.** Disjoint compositional case with multiple background constraints.
+> **Observation.** Disjoint compositional case with multiple background constraints.
 
 <table>
   <tr>
@@ -94,7 +94,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Remove the two cabins (architecture) from the image, leaving only the surrounding snow-covered trees and the snowy landscape., and add rain drops on the surface
 
-**Observation.** Disjoint compositional case combining object removal with surface/weather modification.
+> **Observation.** Disjoint compositional case combining object removal with surface/weather modification.
 
 <table>
   <tr>
@@ -118,7 +118,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Raise the person's right arm., while also removing all shadows
 
-**Observation.** Disjoint compositional case combining pose and lighting/shadow requirement.
+> **Observation.** Disjoint compositional case combining pose and lighting/shadow requirement.
 
 <table>
   <tr>
@@ -142,7 +142,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Transfer the image into a vibrant graffiti street-mural style., and make the water surface more reflective
 
-**Observation.** Disjoint compositional case combining stylization and surface realism.
+> **Observation.** Disjoint compositional case combining stylization and surface realism.
 
 <table>
   <tr>
@@ -166,7 +166,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Remove the red trolley (marked "77" and labeled "WEST CHESTER") from the railway track in the foreground., and darken the edges for a moody atmosphere
 
-**Observation.** Disjoint compositional case combining object removal and global atmosphere change.
+> **Observation.** Disjoint compositional case combining object removal and global atmosphere change.
 
 <table>
   <tr>
@@ -190,7 +190,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Make the person lift his head slightly., and add a lens flare from the sun
 
-**Observation.** Overlap compositional case where pose and optical effect co-occupy related image regions.
+> **Observation.** Overlap compositional case where pose and optical effect co-occupy related image regions.
 
 <table>
   <tr>
@@ -214,7 +214,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Make the person lift his head slightly., and add rain drops on the surface
 
-**Observation.** Overlap compositional case combining pose change and rain-drop effect near the subject.
+> **Observation.** Overlap compositional case combining pose change and rain-drop effect near the subject.
 
 <table>
   <tr>
@@ -238,7 +238,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Change the color of the suit to a deep blue., and make it look like a nighttime scene
 
-**Observation.** Overlap compositional case combining suit-color change and global nighttime conversion.
+> **Observation.** Overlap compositional case combining suit-color change and global nighttime conversion.
 
 <table>
   <tr>
@@ -262,7 +262,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Change the background from the forest to a desert landscape., and make the water surface more reflective
 
-**Observation.** Overlap compositional case combining background replacement with water-surface editing.
+> **Observation.** Overlap compositional case combining background replacement with water-surface editing.
 
 <table>
   <tr>
@@ -298,7 +298,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Make the man look significantly older by adding subtle wrinkles around the eyes and forehead, and turn his hair gray while preserving his happy expression and gentle demeanor.
 
-**Observation.** Age transformation looks materially more realistic, especially in facial texture and the interaction between gray hair and skin aging cues.
+> **Observation.** Age transformation looks materially more realistic, especially in facial texture and the interaction between gray hair and skin aging cues.
 
 <table>
   <tr>
@@ -322,7 +322,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Add a swimming reddish-brown octopus below the diver in the deep blue water, with its tentacles naturally extended.
 
-**Observation.** The inserted octopus is more coherent, while head pose and facial expression remain more believable.
+> **Observation.** The inserted octopus is more coherent, while head pose and facial expression remain more believable.
 
 <table>
   <tr>
@@ -346,7 +346,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Extend the canvas to show more of the girl's upper body and beach background. Dress the girl as a pirate, replace the camera with an antique bronze telescope, and make her pose with it.
 
-**Observation.** The pirate transformation preserves person-specific detail more convincingly while making the new object interaction look more natural.
+> **Observation.** The pirate transformation preserves person-specific detail more convincingly while making the new object interaction look more natural.
 
 <table>
   <tr>
@@ -370,7 +370,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Transform the image into a high-saturation Korean-drama scene with soft lighting, and turn the close-up horse into a unicorn with a spiral horn.
 
-**Observation.** The horse-to-unicorn transformation is more semantically convincing and visually realistic.
+> **Observation.** The horse-to-unicorn transformation is more semantically convincing and visually realistic.
 
 <table>
   <tr>
@@ -394,7 +394,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Replace the old sedan behind the man with a sleek black sports car, remove all signs of damage, and change the man's expression to a natural smile while keeping his other facial features unchanged.
 
-**Observation.** Face consistency is stronger and the beard is not accidentally lost during the edit.
+> **Observation.** Face consistency is stronger and the beard is not accidentally lost during the edit.
 
 <table>
   <tr>
@@ -418,7 +418,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Reduce the visual distortion caused by water ripples covering the swimmer's face and upper body to improve clarity.
 
-**Observation.** The ripple reduction is more natural and does not over-flatten the water texture.
+> **Observation.** The ripple reduction is more natural and does not over-flatten the water texture.
 
 <table>
   <tr>
@@ -442,7 +442,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Extract the navy blue Adidas bodysuit with short sleeves and light blue shoulder stripes worn by the person in the image, and add cherry blossom petals floating in the air
 
-**Observation.** Body scale, skin tone, and garment texture stay closer to the original while the requested apparel extraction/edit remains plausible.
+> **Observation.** Body scale, skin tone, and garment texture stay closer to the original while the requested apparel extraction/edit remains plausible.
 
 <table>
   <tr>
@@ -466,7 +466,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Change the color of footprint in the sand to red., and add autumn leaves falling in the air
 
-**Observation.** The sand texture remains much more realistic after the footprint color edit, rather than becoming over-smoothed or synthetic.
+> **Observation.** The sand texture remains much more realistic after the footprint color edit, rather than becoming over-smoothed or synthetic.
 
 <table>
   <tr>
@@ -490,7 +490,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Raise the person's left arm., and change the lighting to golden hour
 
-**Observation.** Human texture, clothing realism, and shadow structure remain more physically plausible after the edit.
+> **Observation.** Human texture, clothing realism, and shadow structure remain more physically plausible after the edit.
 
 <table>
   <tr>
@@ -516,7 +516,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Replace all fruits with a vegetable and add black polka dots to the cup design, and make the water surface more reflective
 
-**Observation.** Overlap compositional case: both models remain stronger than SFT without a distinct collapse relative to disjoint cases.
+> **Observation.** Overlap compositional case: both models remain stronger than SFT without a distinct collapse relative to disjoint cases.
 
 <table>
   <tr>
@@ -540,7 +540,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Change the green field and trees in the background to a snowy landscape., and also change the background to a sunset sky
 
-**Observation.** Disjoint compositional case with multiple background constraints.
+> **Observation.** Disjoint compositional case with multiple background constraints.
 
 <table>
   <tr>
@@ -564,7 +564,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Remove the two cabins (architecture) from the image, leaving only the surrounding snow-covered trees and the snowy landscape., and add rain drops on the surface
 
-**Observation.** Disjoint compositional case combining object removal with surface/weather modification.
+> **Observation.** Disjoint compositional case combining object removal with surface/weather modification.
 
 <table>
   <tr>
@@ -588,7 +588,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Raise the person's right arm., while also removing all shadows
 
-**Observation.** Disjoint compositional case combining pose and lighting/shadow requirement.
+> **Observation.** Disjoint compositional case combining pose and lighting/shadow requirement.
 
 <table>
   <tr>
@@ -612,7 +612,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Transfer the image into a vibrant graffiti street-mural style., and make the water surface more reflective
 
-**Observation.** Disjoint compositional case combining stylization and surface realism.
+> **Observation.** Disjoint compositional case combining stylization and surface realism.
 
 <table>
   <tr>
@@ -636,7 +636,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Remove the red trolley (marked "77" and labeled "WEST CHESTER") from the railway track in the foreground., and darken the edges for a moody atmosphere
 
-**Observation.** Disjoint compositional case combining object removal and global atmosphere change.
+> **Observation.** Disjoint compositional case combining object removal and global atmosphere change.
 
 <table>
   <tr>
@@ -660,7 +660,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Make the person lift his head slightly., and add a lens flare from the sun
 
-**Observation.** Overlap compositional case where pose and optical effect co-occupy related image regions.
+> **Observation.** Overlap compositional case where pose and optical effect co-occupy related image regions.
 
 <table>
   <tr>
@@ -684,7 +684,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Make the person lift his head slightly., and add rain drops on the surface
 
-**Observation.** Overlap compositional case combining pose change and rain-drop effect near the subject.
+> **Observation.** Overlap compositional case combining pose change and rain-drop effect near the subject.
 
 <table>
   <tr>
@@ -708,7 +708,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Change the color of the suit to a deep blue., and make it look like a nighttime scene
 
-**Observation.** Overlap compositional case combining suit-color change and global nighttime conversion.
+> **Observation.** Overlap compositional case combining suit-color change and global nighttime conversion.
 
 <table>
   <tr>
@@ -732,7 +732,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Change the background from the forest to a desert landscape., and make the water surface more reflective
 
-**Observation.** Overlap compositional case combining background replacement with water-surface editing.
+> **Observation.** Overlap compositional case combining background replacement with water-surface editing.
 
 <table>
   <tr>
@@ -758,7 +758,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Convert this square image into a 3:2 landscape composition.
 
-**Observation.** Resize failure: the model does not successfully perform the requested proportion change from square to 3:2 landscape.
+> **Observation.** Resize failure: the model does not successfully perform the requested proportion change from square to 3:2 landscape.
 
 <table>
   <tr>
@@ -782,7 +782,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Convert this portrait image into a landscape one.
 
-**Observation.** Resize failure: converting a portrait-oriented composition into a landscape layout remains unreliable.
+> **Observation.** Resize failure: converting a portrait-oriented composition into a landscape layout remains unreliable.
 
 <table>
   <tr>
@@ -806,7 +806,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Convert this into a Ghibli-style watercolor animation
 
-**Observation.** Stylization failure: the result does not convincingly reach the requested Ghibli-style watercolor animation target.
+> **Observation.** Stylization failure: the result does not convincingly reach the requested Ghibli-style watercolor animation target.
 
 <table>
   <tr>
@@ -830,7 +830,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Convert the image into a Miyazaki-style hand-drawn animation.
 
-**Observation.** Stylization failure: the output misses the intended Miyazaki-like hand-drawn aesthetic.
+> **Observation.** Stylization failure: the output misses the intended Miyazaki-like hand-drawn aesthetic.
 
 <table>
   <tr>
@@ -866,7 +866,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Remove all people from the background, and change the purple ribbon on the subject's graduation gown to orange.
 
-**Observation.** Only the targeted ribbon region is edited, while other irrelevant areas remain intact.
+> **Observation.** Only the targeted ribbon region is edited, while other irrelevant areas remain intact.
 
 <table>
   <tr>
@@ -890,7 +890,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Replace the child's hair with black long curly hair, then change it to a chef's hat and white chef outfit while keeping the facial expression unchanged.
 
-**Observation.** The compound request is satisfied more completely, especially the replacement of black long curly hair, while facial expression remains faithful.
+> **Observation.** The compound request is satisfied more completely, especially the replacement of black long curly hair, while facial expression remains faithful.
 
 <table>
   <tr>
@@ -914,7 +914,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Add a light-gray modern sofa set and coffee table near the blank wall opposite the kitchen island, place a medium-sized plant beside it, add a large light-toned abstract painting on the opposite wall, place a small plant beside the TV cabinet, and add a light-gray mat near the apartment entrance.
 
-**Observation.** The compound request is satisfied without globally repainting the non-edited wall and room structure.
+> **Observation.** The compound request is satisfied without globally repainting the non-edited wall and room structure.
 
 <table>
   <tr>
@@ -938,7 +938,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Add black hanging dreadlocks to the man.
 
-**Observation.** The person remains in the same position and pose; competing models introduce unintended pose changes.
+> **Observation.** The person remains in the same position and pose; competing models introduce unintended pose changes.
 
 <table>
   <tr>
@@ -962,7 +962,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Change the black mug in the original image to green while preserving the 'NVIDIA' logo, add an Asian male holding the green mug, and replace the background with a modern office.
 
-**Observation.** Product appearance and text consistency are preserved more accurately.
+> **Observation.** Product appearance and text consistency are preserved more accurately.
 
 <table>
   <tr>
@@ -986,7 +986,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Convert the two men into women. Give the woman on the left a light floral-patterned shirt and the woman on the right a light floral-patterned top, while preserving their poses and interactive expressions and keeping the result natural in a professional office setting.
 
-**Observation.** Gender transformation is successful while pose and interaction remain stable; competing outputs either miss the gender conversion or alter pose.
+> **Observation.** Gender transformation is successful while pose and interaction remain stable; competing outputs either miss the gender conversion or alter pose.
 
 <table>
   <tr>
@@ -1010,7 +1010,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Replace the wooden cabinets in the background with white marble.
 
-**Observation.** Only the specified background region is replaced; unrelated background regions remain unchanged.
+> **Observation.** Only the specified background region is replaced; unrelated background regions remain unchanged.
 
 <table>
   <tr>
@@ -1034,7 +1034,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Do the following three steps: 1) zoom out to show a seated person facing a laptop; 2) remove all text from the cardboard box; 3) keep the box, laptop, and background unchanged.
 
-**Observation.** The relative position of the box and laptop, as well as the surrounding background, stays fixed as requested.
+> **Observation.** The relative position of the box and laptop, as well as the surrounding background, stays fixed as requested.
 
 <table>
   <tr>
@@ -1069,7 +1069,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Convert this square image into a 3:2 landscape composition.
 
-**Observation.** Resize failure: the model does not successfully perform the requested proportion change from square to 3:2 landscape.
+> **Observation.** Resize failure: the model does not successfully perform the requested proportion change from square to 3:2 landscape.
 
 <table>
   <tr>
@@ -1093,7 +1093,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Convert this portrait image into a landscape one.
 
-**Observation.** Resize failure: converting a portrait-oriented composition into a landscape layout remains unreliable.
+> **Observation.** Resize failure: converting a portrait-oriented composition into a landscape layout remains unreliable.
 
 <table>
   <tr>
@@ -1117,7 +1117,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Convert this into a Ghibli-style watercolor animation
 
-**Observation.** Stylization failure: the result does not convincingly reach the requested Ghibli-style watercolor animation target.
+> **Observation.** Stylization failure: the result does not convincingly reach the requested Ghibli-style watercolor animation target.
 
 <table>
   <tr>
@@ -1141,7 +1141,7 @@ This page provides the qualitative and quantitative evidence referenced in the a
 
 **Prompt.** Convert the image into a Miyazaki-style hand-drawn animation.
 
-**Observation.** Stylization failure: the output misses the intended Miyazaki-like hand-drawn aesthetic.
+> **Observation.** Stylization failure: the output misses the intended Miyazaki-like hand-drawn aesthetic.
 
 <table>
   <tr>
