@@ -2,6 +2,8 @@
 
 This page provides the qualitative and quantitative evidence referenced in the anonymous rebuttal. It is organized by reviewer concern for quick inspection.
 
+> For the best viewing experience, we recommend downloading the bundled local HTML supplement and opening `index.html` locally. The in-browser repository view is convenient for quick inspection, but the local HTML version provides a cleaner reviewer-first layout and smoother image browsing.
+
 - [Reviewer mki2](#reviewer-mki2)
 - [Reviewer mVvh](#reviewer-mvvh)
 - [Reviewer V9Gq](#reviewer-v9gq)
