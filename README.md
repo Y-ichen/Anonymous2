@@ -271,6 +271,16 @@ This page provides the qualitative and quantitative evidence referenced in the a
 - Relative to `SFT`, `TC-FM` already improves non-edited-region preservation and face consistency.
 - `TC-FM+` further improves local realism, material texture, and physical plausibility.
 
+### How this section addresses the follow-up
+
+This section is organized to answer the remaining `mVvh` concerns as directly as possible, rather than only adding more images. The first goal is to make the contribution of regular `TC-FM` visually legible: the gallery below is intentionally arranged as `Source / SFT / TC-FM / TC-FM+`, so that the reviewer can inspect the intermediate gain from `TC-FM` itself instead of seeing only the final `TC-FM+` result.
+
+The second goal is to clarify what Figure 3 is supposed to communicate. The conceptual point is not that every region has zero denoising target, but that `TC-FM` introduces near-zero additional correction on invariant regions while concentrating correction on edited regions. In the revision, we will simplify the current top illustration into a clearer stage-by-stage decomposition, or remove the cluttered conceptual panels entirely and retain only the empirical gradient visualization.
+
+The third goal is to make the evaluation protocol inspectable. Below, we provide the exact benchmark prompt setup used for `SC / PQ`, the prompt assembly actually used in the GEdit pipeline, and the aggregation rule used to compute the final score. This is meant to make the judge-based evaluation as transparent and reproducible as possible.
+
+Finally, for Eq. 7, the intended reconstruction regularizer uses an error-driven mask rather than a uniform full-image penalty. In our implementation, the reconstruction mask is built from the pixel-wise error map by collapsing RGB error into a single-channel heatmap, normalizing it, and thresholding it to emphasize high-discrepancy regions. We expose this logic here because the current paper leaves the transition from `E` to `M_err` too implicit.
+
 ### Evaluation prompts / protocol
 
 - To address the reviewer concern about `SC / PQ` scoring and prompt setup, we first list the exact GEdit evaluation configuration actually used in our rebuttal experiments, and then provide the full benchmark prompt files below.
