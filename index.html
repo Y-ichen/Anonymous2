@@ -7,8 +7,8 @@
   <style>
     :root {
       --bg: #f5efe6;
-      --panel: rgba(255, 252, 247, 0.96);
-      --panel-strong: #fffaf2;
+      --panel: rgba(251, 246, 239, 0.96);
+      --panel-strong: #fbf6ef;
       --ink: #1f1b18;
       --ink-strong: #171310;
       --ink-soft: #3e342d;
@@ -19,7 +19,7 @@
       --accent: #b45a3c;
       --accent-2: #246a73;
       --accent-3: #c18b2c;
-      --shadow: 0 18px 40px rgba(58, 39, 23, 0.08);
+      --shadow: none;
       --radius-lg: 24px;
       --radius-md: 18px;
       --radius-sm: 12px;
@@ -35,7 +35,9 @@
     body {
       margin: 0;
       color: var(--ink-soft);
-      background: #f6f1ea;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.26), rgba(255,255,255,0.04) 140px),
+        var(--bg);
       font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.5;
     }
@@ -65,9 +67,12 @@
     .rail {
       position: sticky;
       top: 20px;
+      z-index: auto;
+      margin: 0;
       padding: 12px 0 12px 18px;
       border: 0;
       border-left: 1px solid rgba(74, 57, 45, 0.10);
+      border-bottom: 0;
       border-radius: 0;
       background: transparent;
       box-shadow: none;
@@ -204,11 +209,13 @@
     }
 
     .section {
-      padding: 8px 0 28px;
+      padding: 8px 0 0;
     }
 
     .view-section {
       display: none;
+      padding-top: 0;
+      border-top: 0;
     }
 
     .view-section.active {
@@ -218,9 +225,9 @@
     .section-head {
       display: grid;
       gap: 8px;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
       padding-bottom: 16px;
-      border-bottom: 1px solid rgba(74, 57, 45, 0.12);
+      border-bottom: 0;
     }
 
     .subsection-head {
@@ -278,21 +285,21 @@
     .chart-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
+      gap: 28px;
       margin-top: 18px;
-      margin-bottom: 22px;
+      margin-bottom: 28px;
     }
 
     .chart-card {
-      padding: 0 0 14px;
+      padding: 0 0 18px;
       border-radius: 0;
       background: transparent;
-      border: 0;
+      border-top: 1px solid rgba(74, 57, 45, 0.14);
     }
 
     .chart-card h3 {
       font-size: 1rem;
-      margin-bottom: 4px;
+      margin: 14px 0 4px;
     }
 
     .chart-card p {
@@ -338,13 +345,14 @@
     .case-card {
       border: 0;
       border-radius: 0;
-      background: rgba(255, 251, 245, 0.72);
+      background: transparent;
       overflow: hidden;
-      padding: 18px 18px 22px;
+      padding: 22px 0 28px;
+      border-top: 1px solid rgba(74, 57, 45, 0.12);
     }
 
     .case-card + .case-card {
-      margin-top: 20px;
+      margin-top: 0;
     }
 
     .case-head {
@@ -369,9 +377,9 @@
       display: grid;
       gap: 6px;
       margin: 0;
-      padding: 12px 14px 11px;
+      padding: 14px 0 11px;
       background: transparent;
-      border: 1px solid rgba(74, 57, 45, 0.12);
+      border-top: 1px solid rgba(74, 57, 45, 0.10);
       border-radius: 0;
     }
 
@@ -484,9 +492,10 @@
 
     .findings-callout {
       margin: 0 0 18px;
-      padding: 16px 18px;
-      background: rgba(255, 248, 238, 0.9);
-      border-left: 3px solid var(--accent);
+      padding: 16px 0 0;
+      background: transparent;
+      border-left: 0;
+      border-top: 2px solid rgba(180, 90, 60, 0.28);
     }
 
     .findings-callout h3 {
@@ -499,6 +508,141 @@
       color: var(--ink-soft);
       font-size: 0.95rem;
       max-width: 78ch;
+    }
+
+    .protocol-card {
+      margin: 0 0 22px;
+      padding: 18px 0 0;
+      background: transparent;
+      border: 0;
+      border-top: 1px solid rgba(74, 57, 45, 0.12);
+      border-radius: 0;
+    }
+
+    .protocol-card h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .protocol-card p,
+    .protocol-card li {
+      color: var(--ink-soft);
+      font-size: 0.94rem;
+    }
+
+    .protocol-card p {
+      margin: 0 0 8px;
+      max-width: 78ch;
+    }
+
+    .protocol-card ul {
+      margin: 0 0 12px;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .protocol-card details + details {
+      margin-top: 12px;
+    }
+
+    .protocol-card summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--ink-strong);
+    }
+
+    .protocol-note {
+      margin: 0 0 14px;
+      color: var(--ink-soft);
+      font-size: 0.94rem;
+      max-width: 80ch;
+    }
+
+    .protocol-file {
+      margin-top: 14px;
+      border: 1px solid rgba(74, 57, 45, 0.10);
+      border-radius: 0;
+      background: rgba(249, 244, 236, 0.7);
+      overflow: hidden;
+    }
+
+    .protocol-file details {
+      margin: 0;
+    }
+
+    .protocol-file summary {
+      list-style: none;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(255,255,255,0.34);
+      border-bottom: 1px solid rgba(74, 57, 45, 0.08);
+    }
+
+    .protocol-file summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .protocol-file-head {
+      display: grid;
+      gap: 4px;
+    }
+
+    .protocol-file-name {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.87rem;
+      color: var(--ink-strong);
+    }
+
+    .protocol-file-meta {
+      font-size: 0.83rem;
+      color: var(--ink-soft);
+    }
+
+    .protocol-toggle {
+      flex-shrink: 0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: rgba(74, 57, 45, 0.62);
+    }
+
+    .protocol-viewer {
+      padding: 14px 16px 16px;
+      background: rgba(255, 252, 247, 0.5);
+    }
+
+    .protocol-viewer pre {
+      margin: 0;
+    }
+
+    .protocol-card pre {
+      margin: 10px 0 0;
+      padding: 14px;
+      border-radius: 12px;
+      background: #f8f3eb;
+      border: 1px solid rgba(74, 57, 45, 0.10);
+      overflow: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 0.8rem;
+      line-height: 1.45;
+      color: #352d28;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    .protocol-frame {
+      width: 100%;
+      height: 420px;
+      margin-top: 0;
+      border: 1px solid rgba(74, 57, 45, 0.08);
+      border-radius: 0;
+      background: #fffdf9;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.65);
     }
 
     .lightbox {
@@ -606,12 +750,6 @@
       .shell {
         width: min(calc(100vw - 18px), var(--maxw));
         margin: 10px auto 40px;
-        gap: 14px;
-      }
-
-      .hero,
-      .section {
-        padding: 20px;
       }
 
       .chart-grid,
@@ -625,6 +763,11 @@
 
       .zoom-hint {
         display: none;
+      }
+
+      .hero,
+      .section {
+        padding: 20px;
       }
     }
   </style>
@@ -707,6 +850,135 @@
           <p>
             Across these additional qualitative examples, <code>TC-FM</code> already improves over <code>SFT</code> in non-edited-region preservation and facial consistency, while <code>TC-FM+</code> further strengthens local realism, material texture, and physical plausibility. These cases are included to make the intermediate contribution of regular <code>TC-FM</code> directly visible.
           </p>
+        </div>
+        <div class="protocol-card" id="mvvh-protocol-card">
+          <h3>Evaluation prompts / protocol</h3>
+          <p>
+            To address the reviewer concern about <code>SC / PQ</code> scoring and prompt setup, we first summarize the exact GEdit evaluation configuration actually used in our rebuttal experiments, and then include the full benchmark prompt files below.
+          </p>
+          <p class="protocol-note">
+            <code>ImgEdit</code> uses task-specific prompts with three 1-5 criteria per edit type, while <code>GEdit</code> uses prompt-following / overediting scoring for <code>SC</code> and naturalness / artifact scoring for <code>PQ</code>.
+          </p>
+          <div class="protocol-file">
+            <details>
+              <summary>
+                <span class="protocol-file-head">
+                  <span class="protocol-file-name">GEdit / actual evaluation setup used</span>
+                  <span class="protocol-file-meta">Sanitized experiment configuration for the rebuttal scoring run.</span>
+                </span>
+                <span class="protocol-toggle">Expand</span>
+              </summary>
+              <div class="protocol-viewer">
+                <pre>Judge backbone: Gemini-2.5-Flash
+VIEScore mode: tie
+Dataset: GEdit benchmark (1212 entries)
+Task types: background_change, color_alter, material_alter, motion_change, ps_human, style_change, subject-add, subject-remove, subject-replace, text_change, tone_transfer
+Languages: en, cn
+Image preprocessing: resized to area-equivalent 512x512 while preserving aspect ratio
+Parallel workers: 150
+
+Evaluation inputs:
+- SC prompt takes the original image and the edited image, together with the editing instruction
+- PQ prompt takes only the edited image</pre>
+              </div>
+            </details>
+          </div>
+          <div class="protocol-file">
+            <details>
+              <summary>
+                <span class="protocol-file-head">
+                  <span class="protocol-file-name">GEdit / exact prompt assembly + aggregation</span>
+                  <span class="protocol-file-meta">The exact branches of the prompt library and score aggregation actually used.</span>
+                </span>
+                <span class="protocol-toggle">Expand</span>
+              </summary>
+              <div class="protocol-viewer">
+                <pre>SC = _context_no_delimit + _prompts_0shot_two_image_edit_rule + _prompts_0shot_tie_rule_SC
+PQ = _context_no_delimit + _prompts_0shot_rule_PQ
+
+SC_score = min(results_dict["SC"]["score"])
+PQ_score = min(results_dict["PQ"]["score"])
+Overall_score = sqrt(SC_score * PQ_score)
+
+That is, SC is the minimum of editing-success and overediting, PQ is the minimum of naturalness and artifact-free quality, and the final score is their geometric mean.</pre>
+              </div>
+            </details>
+          </div>
+          <div class="protocol-file">
+            <details>
+              <summary>
+                <span class="protocol-file-head">
+                  <span class="protocol-file-name">GEdit / exact SC prompt used</span>
+                  <span class="protocol-file-meta">The assembled prompt actually used for semantic-consistency scoring.</span>
+                </span>
+                <span class="protocol-toggle">Expand</span>
+              </summary>
+              <div class="protocol-viewer">
+                <iframe
+                  class="protocol-frame"
+                  src="./evaluation_protocols/gedit_exact_sc_prompt.txt"
+                  title="Exact GEdit SC prompt used"
+                ></iframe>
+              </div>
+            </details>
+          </div>
+          <div class="protocol-file">
+            <details>
+              <summary>
+                <span class="protocol-file-head">
+                  <span class="protocol-file-name">GEdit / exact PQ prompt used</span>
+                  <span class="protocol-file-meta">The assembled prompt actually used for perceptual-quality scoring.</span>
+                </span>
+                <span class="protocol-toggle">Expand</span>
+              </summary>
+              <div class="protocol-viewer">
+                <iframe
+                  class="protocol-frame"
+                  src="./evaluation_protocols/gedit_exact_pq_prompt.txt"
+                  title="Exact GEdit PQ prompt used"
+                ></iframe>
+              </div>
+            </details>
+          </div>
+          <p class="protocol-note" style="margin-top: 16px;">
+            Full benchmark prompt libraries are also included below for completeness.
+          </p>
+          <div class="protocol-file">
+            <details>
+              <summary>
+                <span class="protocol-file-head">
+                  <span class="protocol-file-name">ImgEdit / prompts.json</span>
+                  <span class="protocol-file-meta">Task-specific evaluation prompts with 1-5 scoring criteria.</span>
+                </span>
+                <span class="protocol-toggle">Expand</span>
+              </summary>
+              <div class="protocol-viewer">
+                <iframe
+                  class="protocol-frame"
+                  src="./evaluation_protocols/imgedit_prompts.json"
+                  title="Full ImgEdit prompt file"
+                ></iframe>
+              </div>
+            </details>
+          </div>
+          <div class="protocol-file">
+            <details>
+              <summary>
+                <span class="protocol-file-head">
+                  <span class="protocol-file-name">GEdit / vie_prompts.py</span>
+                  <span class="protocol-file-meta">Benchmark judge prompts for <code>SC</code> and <code>PQ</code> scoring.</span>
+                </span>
+                <span class="protocol-toggle">Expand</span>
+              </summary>
+              <div class="protocol-viewer">
+                <iframe
+                  class="protocol-frame"
+                  src="./evaluation_protocols/gedit_vie_prompts.py"
+                  title="Full GEdit prompt file"
+                ></iframe>
+              </div>
+            </details>
+          </div>
         </div>
         <div class="gallery" id="mvvh-gallery"></div>
         <div class="section-head" style="margin-top: 28px;">
